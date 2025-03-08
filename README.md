@@ -74,4 +74,5 @@ This repository contains my solutions to various problems from LeetCode. The sol
 g++ AddTwoNums.cpp -o AddTwoNums
 ./AddTwoNums
 
-This template should cover the details for each file, explain how to compile and run the code, and offer guidance for anyone who may want to contribute. You can update the repository link with your own GitHub URL and adjust any other specifics to match your project setup!
+
+This template should cover the details for each file, explain how to compile and run the code, and offer guidance for anyone who may want to contribute. You'll can update the repository link with your own GitHub URL and adjust any other specifics to match your project setup!
