@@ -1,78 +1,154 @@
-# LeetCode Solutions
 
-This repository contains my solutions to various problems from LeetCode. The solutions are written in C++ and are organized by problem type. Below is a list of the problems I have solved, along with a brief description of each file.
 
-## Files and Descriptions
+LeetCode Solutions
 
-1. **AddTwoNums.cpp**
-   - Problem: Add two numbers represented by linked lists.
-   - Solution: Implements a function to add two numbers represented as linked lists and return the sum as a new linked list.
+This repository contains my solutions to various problems from LeetCode. The solutions are written in C++ and organized by problem type. Below is a list of the problems I have solved, along with a brief description of each file.
 
-2. **BinaryTreePostorder.cpp**
-   - Problem: Postorder traversal of a binary tree.
-   - Solution: Implements a recursive algorithm to traverse a binary tree in postorder.
 
-3. **BinaryTreePreorder.cpp**
-   - Problem: Preorder traversal of a binary tree.
-   - Solution: Implements a recursive algorithm to traverse a binary tree in preorder.
+---
 
-4. **ContainsDuplicate.cpp**
-   - Problem: Check if an array contains any duplicates.
-   - Solution: Solves the problem by using a hash set to identify if duplicates exist.
+Files and Descriptions
 
-5. **LongestSubstring.cpp**
-   - Problem: Find the length of the longest substring without repeating characters.
-   - Solution: Implements a sliding window technique to find the longest substring with unique characters.
+AddTwoNums.cpp
 
-6. **MaximumDepth.cpp**
-   - Problem: Find the maximum depth of a binary tree.
-   - Solution: Implements a recursive function to calculate the depth of a binary tree.
+Problem: Add two numbers represented by linked lists.
+Solution: Implements a function to add two numbers represented as linked lists and return the sum as a new linked list.
 
-7. **MergeSortedArray.cpp**
-   - Problem: Merge two sorted arrays.
-   - Solution: Efficiently merges two sorted arrays into one sorted array.
+BinaryTreePostorder.cpp
 
-8. **RemoveDuplicateFromSortedList.cpp**
-   - Problem: Remove duplicates from a sorted linked list.
-   - Solution: Removes duplicates from a sorted linked list by iterating through the list and adjusting pointers.
+Problem: Postorder traversal of a binary tree.
+Solution: Implements a recursive algorithm to traverse a binary tree in postorder.
 
-9. **RomanToInteger.cpp**
-   - Problem: Convert a Roman numeral to an integer.
-   - Solution: Implements an algorithm to convert Roman numerals to integer values based on predefined rules.
+BinaryTreePreorder.cpp
 
-10. **RotateList.cpp**
-    - Problem: Rotate a linked list by k places.
-    - Solution: Efficiently rotates a singly linked list by k places using two pointers.
+Problem: Preorder traversal of a binary tree.
+Solution: Implements a recursive algorithm to traverse a binary tree in preorder.
 
-11. **SearchInsertPosition.cpp**
-    - Problem: Find the position to insert a number in a sorted array.
-    - Solution: Uses binary search to find the appropriate index for insertion.
+ContainsDuplicate.cpp
 
-12. **TwoSum.cpp**
-    - Problem: Find two numbers in an array that sum up to a given target.
-    - Solution: Solves the problem using a hash map for efficient lookups.
+Problem: Check if an array contains any duplicates.
+Solution: Uses a hash set to detect duplicates efficiently.
 
-## Additional Problems
+LongestSubstring.cpp
 
-- **BalancedBinaryTree.cpp**  
-   - Problem: Check if a binary tree is balanced.
-   - Solution: Implements a solution to determine if the binary tree is height-balanced.
+Problem: Find the length of the longest substring without repeating characters.
+Solution: Uses the sliding window technique to track the longest unique substring.
 
-- **PascalsTriangle1.cpp**  
-   - Problem: Generate the first n rows of Pascal's Triangle.
-   - Solution: Generates the triangle iteratively.
+MaximumDepth.cpp
 
-- **PascalsTriangle2.cpp**  
-   - Problem: Generate the nth row of Pascal's Triangle.
-   - Solution: Efficiently calculates the nth row using dynamic programming.
+Problem: Find the maximum depth of a binary tree.
+Solution: Recursively calculates the depth of the tree.
 
-## How to Use
+MergeSortedArray.cpp
+
+Problem: Merge two sorted arrays.
+Solution: Efficiently merges two sorted arrays into one.
+
+RemoveDuplicateFromSortedList.cpp
+
+Problem: Remove duplicates from a sorted linked list.
+Solution: Iterates through the list and adjusts pointers to remove duplicates.
+
+RomanToInteger.cpp
+
+Problem: Convert a Roman numeral to an integer.
+Solution: Converts Roman numerals to integers using a predefined rule set.
+
+RotateList.cpp
+
+Problem: Rotate a linked list by k places.
+Solution: Uses two-pointer technique to rotate the list efficiently.
+
+SearchInsertPosition.cpp
+
+Problem: Find the position to insert a number in a sorted array.
+Solution: Uses binary search to find the correct index.
+
+TwoSum.cpp
+
+Problem: Find two numbers in an array that sum up to a given target.
+Solution: Uses a hash map for quick lookups to find the pair.
+
+
+---
+
+Additional Problems
+
+BalancedBinaryTree.cpp
+
+Problem: Check if a binary tree is balanced.
+Solution: Determines if the tree is height-balanced.
+
+PascalsTriangle1.cpp
+
+Problem: Generate the first n rows of Pascal's Triangle.
+Solution: Iteratively generates rows of the triangle.
+
+PascalsTriangle2.cpp
+
+Problem: Generate the nth row of Pascal's Triangle.
+Solution: Uses dynamic programming to calculate the row efficiently.
+
+
+---
+
+SQL Practice Problems
+
+Here are some SQL queries I've practiced for database-related challenges:
+
+1. Customers Who Bought All Products
+
+SELECT customer_id
+FROM Customer
+GROUP BY customer_id
+HAVING COUNT(DISTINCT product_key) = (
+    SELECT COUNT(*) FROM Product
+);
+
+2. First Year of Sales for Each Product
+
+WITH RankedSales AS (
+    SELECT *, 
+           ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY year) AS rn
+    FROM Sales
+)
+SELECT product_id, year AS first_year, quantity, price
+FROM RankedSales
+WHERE rn = 1;
+
+3. Average Experience per Project
+
+SELECT 
+    p.project_id, 
+    ROUND(AVG(e.experience_years), 2) AS average_years
+FROM Project p
+JOIN Employee e 
+    ON p.employee_id = e.employee_id
+GROUP BY p.project_id;
+
+
+---
+
+How to Use
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/leetcode-solutions.git
+
+
+
+git clone https://github.com/yourusername/leetcode-solutions.git
+
+2. Compile and run a file:
+
+
+
 g++ AddTwoNums.cpp -o AddTwoNums
 ./AddTwoNums
 
 
-This template should cover the details for each file, explain how to compile and run the code, and offer guidance for anyone who may want to contribute. You'll can update the repository link with your own GitHub URL and adjust any other specifics to match your project setup Hope you like it!
+---
+
+Feel free to explore, use, or contribute to this repository. Update the GitHub URL to your actual profile and adapt any paths or filenames as needed. Happy coding!
+
+
+---
+
