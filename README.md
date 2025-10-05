@@ -69,7 +69,7 @@ TwoSum.cpp
 Problem: Find two numbers in an array that sum up to a given target.
 Solution: Uses a hash map for quick lookups to find the pair.
 
-
+Solved multiple problems using Java 
 ---
 
 Additional Problems
