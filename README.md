@@ -148,7 +148,7 @@ g++ AddTwoNums.cpp -o AddTwoNums
 ---
 
 Feel free to explore, use, or contribute to this repository. Update the GitHub URL to your actual profile and adapt any paths or filenames as needed. 
-Happy codeing!!!!!
+Happy codeing!!!!
 
 ---
 
