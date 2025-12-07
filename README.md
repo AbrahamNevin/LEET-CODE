@@ -127,22 +127,6 @@ JOIN Employee e
 GROUP BY p.project_id;
 
 
----
-
-How to Use
-
-1. Clone the repository:
-
-
-
-git clone https://github.com/yourusername/leetcode-solutions.git
-
-2. Compile and run a file:
-
-
-
-g++ AddTwoNums.cpp -o AddTwoNums
-./AddTwoNums
 
 
 ---
