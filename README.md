@@ -74,10 +74,6 @@ Solved multiple problems using Java
 
 Additional Problems
 
-BalancedBinaryTree.cpp
-
-Problem: Check if a binary tree is balanced.
-Solution: Determines if the tree is height-balanced.
 
 PascalsTriangle1.cpp
 
